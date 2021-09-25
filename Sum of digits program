@@ -1,0 +1,22 @@
+#include<stdio.h>
+int sum (int num);
+int main()
+{
+    int num, sumofdigits;
+    printf("Enter the number: ");
+    scanf("%d", &num);
+    sumofdigits = sum(num);
+    printf("Sum is %d",sumofdigits);
+    return 0;
+}
+int sum(int num)
+{
+    if(num!=0)
+    {
+        return(num%10+sum(num/10));
+    }
+    else
+    {
+       return 0;
+    }
+}
